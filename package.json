@@ -1,0 +1,28 @@
+{
+    "name": "exemplo2019api",
+    "version": "1.0.0",
+    "description": "API de exemplo",
+    "main": " ",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "build": "npm run compilats ",
+        "compilats": "tsc",
+        "postcompilats": "npm run copiarArquivos",
+        "copiarArquivos": "copyfiles aspts/lib/*.* dist && copyfiles *.as* dist",
+        "test": " "
+    },
+    "repository": {
+        "type": "git",
+        "url": " "
+    },
+    "keywords": [
+        "ASP",
+        "TS",
+        "API",
+        "EXEMPLO"
+    ],
+    "author": "Eduardo Rodrigues Silva",
+    "license": "ISC"
+}

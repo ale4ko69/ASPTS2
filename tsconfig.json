@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es3",
+    "lib": ["es5", "scripthost"],
+    "module": "none",    
+    "outDir": "dist/",
+    "noResolve": false   
+
+  },
+  "files": [   
+    "ts/main.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}
