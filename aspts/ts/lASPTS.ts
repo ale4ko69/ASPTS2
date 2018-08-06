@@ -443,6 +443,7 @@ namespace ASPTS {
     error(code: number, message?: Object | number | Object) {
       Response.Clear();
       this.status(500);
+      Response.ContentType = "application/json";
       if (typeof message !== "undefined") {
         const message = { msg: "Ocorreu uma falha interna do servidor" };
       }

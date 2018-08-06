@@ -1,5 +1,5 @@
 /// <reference path="controllerInterface.d.ts" />
-/// <reference path="Router.ts" />
+/// <reference path="../routes/Router.ts" />
 enum MainActions {}
 class MainController implements Controller {
   private app: ASPTS.ASPAdapter;
@@ -28,8 +28,8 @@ class MainController implements Controller {
   }
 
   PostOnly() {
-    if (this.app.env.production) {
-      if (this.app.req.getServerVariables("HTTP_METHOD") == "GET") {
+    if (this.app.env.production) {        
+      if (this.app.req.method() == 'GET') {
         this.app.res.error(403, { erro: "Metodo não autorizado" });        
       }
     }

@@ -1,6 +1,6 @@
 /// <reference path="../../aspts/tstypes/asp/index.d.ts" />
 /// <reference path="../../aspts/ts/lASPTS.ts" />
-/// <reference path="testSqlController.ts" />
+/// <reference path="../controllers/testSqlController.ts" />
 
 
 // rotas de exemplo listando variaveis do servidor ASP
@@ -20,6 +20,7 @@ class Router {
     Route(){
         const controller = String(this.app.req.getQueryString("c")).toLowerCase()
         const action = String(this.app.req.getQueryString("a")).toLowerCase()
+        const version = String(this.app.req.getQueryString("v")).toLowerCase()
         switch (controller) {
             case RoutesEnum.testeRoute:   
                 this.app.res.json({route: RoutesEnum.testeRoute, action: action})
@@ -27,7 +28,7 @@ class Router {
             
             case RoutesEnum.testSQLRoute:   
                 const testSQLctr = new testSqlController(this.app)
-                testSQLctr.run(action)                
+                testSQLctr.run(action, version)                
                 break;
                 
             default:

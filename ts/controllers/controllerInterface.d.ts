@@ -1,5 +1,5 @@
 declare class Controller {
     constructor(app: ASPTS.ASPAdapter)
-    run(action?: string)
+    run(action?: string, version?: string)
   
 }

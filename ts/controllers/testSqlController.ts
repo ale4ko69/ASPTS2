@@ -1,5 +1,3 @@
-
-
 /// <reference path="controllerInterface.d.ts" />
 /// <reference path="../../aspts/ts/lASPTS.ts" />
 /// <reference path="../../aspts/ts/SQLServerAdapter.ts" />
@@ -15,7 +13,7 @@ class testSqlController implements Controller {
         this.sql =  new ASPTS.SQL.SqlServerAdapter(env.connectionstring, app)       
     }
 
-    run(action: string){
+    run(action: string, version: string){
 
         switch (action) {
             case testSqlActionsEnum.lista:
@@ -37,7 +35,7 @@ class testSqlController implements Controller {
         this.app.res.json(all)
     }
     private lista(action: string){
-        const query ="EXEC  [simulador2019].[SP_TESTE]"
+        const query ="EXEC [dbo].[SP_TESTE]"
         const res = this.sql.query(query)
         this.app.res.json(res)                
     }

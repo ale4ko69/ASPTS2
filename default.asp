@@ -13,7 +13,7 @@
 
 <script language="Jscript" runat="server" src="ts/controllers/testSqlController.js"></script>
 
-<script language="Jscript" runat="server" src="ts/controllers/Router.js"></script>
+<script language="Jscript" runat="server" src="ts/routes/Router.js"></script>
 <script language="Jscript" runat="server" src="ts/controllers/mainController.js"></script>
 <script language="Jscript" runat="server" src="ts/main.js"></script>
 
