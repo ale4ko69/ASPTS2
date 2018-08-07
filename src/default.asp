@@ -7,6 +7,7 @@
 <script language="Jscript" runat="server" src="aspts/lib/polyfills.js"></script> 
 <script language="Jscript" runat="server" src="aspts/lib/json2.js"></script>
 <script language="Jscript" runat="server" src="aspts/lib/ua-parser.js"></script>
+<script language="Jscript" runat="server" src="aspts/lib/is.js"></script>
 
 <script language="Jscript" runat="server" src="aspts/ts/lASPTS.js"></script>
 <script language="Jscript" runat="server" src="aspts/ts/SQLServerAdapter.js"></script>

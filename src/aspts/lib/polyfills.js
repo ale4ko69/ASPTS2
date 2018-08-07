@@ -1,4 +1,6 @@
-﻿if (!Array.prototype.filter) {
+﻿
+
+if (!Array.prototype.filter) {
     Array.prototype.filter = function (fun/*, thisArg*/) {
         'use strict';
 
@@ -122,3 +124,8 @@ if (!Array.prototype.map) {
         return A;
     };
 }
+
+''.trim||(String.prototype.trim=function(){return this.replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g,'')})
+
+
+Date.now=Date.now||function(){return new Date().getTime()}

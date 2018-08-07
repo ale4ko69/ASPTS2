@@ -1,5 +1,5 @@
 {
-    "name": "exemplo2019api",
+    "name": "ASPTS2",
     "version": "1.0.0",
     "description": "API de exemplo",
     "main": " ",
@@ -10,7 +10,7 @@
         "build": "npm run compilats ",
         "compilats": "tsc",
         "postcompilats": "npm run copiarArquivos",
-        "copiarArquivos": "copyfiles aspts/lib/*.* dist && copyfiles *.as* dist",
+        "copiarArquivos": "copyfiles -u 1 src/aspts/lib/*.* dist && copyfiles -u 1 src/*.as* dist/",
         "test": " "
     },
     "repository": {
@@ -24,5 +24,11 @@
         "EXEMPLO"
     ],
     "author": "Eduardo Rodrigues Silva",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "@types/is": "0.0.20",
+        "babel-polyfill": "^6.26.0",
+        "lodash": "^4.17.10",
+        "lodash-es": "^4.17.10"
+    }
 }

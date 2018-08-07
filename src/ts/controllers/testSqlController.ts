@@ -1,6 +1,7 @@
 /// <reference path="controllerInterface.d.ts" />
 /// <reference path="../../aspts/ts/lASPTS.ts" />
 /// <reference path="../../aspts/ts/SQLServerAdapter.ts" />
+/// <reference path="../../aspts/tstypes/is/index.d.ts" />
 enum testSqlActionsEnum {
     lista = 'lista',
     devhelp = 'devhelp'
@@ -32,11 +33,13 @@ class testSqlController implements Controller {
 
     private devhelp(){
         const all = this.app.listaTudo()
+        all['now']=Date.now()
+        all['is']=is.json(all)
         this.app.res.json(all)
     }
     private lista(action: string){
         const query ="EXEC [dbo].[SP_TESTE]"
-        const res = this.sql.query(query)
+        const res = this.sql.query(query)        
         this.app.res.json(res)                
     }
 }

@@ -30,7 +30,7 @@ class MainController implements Controller {
   PostOnly() {
     if (this.app.env.production) {        
       if (this.app.req.method() == 'GET') {
-        this.app.res.error(403, { erro: "Metodo não autorizado" });        
+        this.app.res.error(403, { erro: "Método GET não autorizado" });        
       }
     }
   }
