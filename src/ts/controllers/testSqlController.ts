@@ -32,9 +32,7 @@ class testSqlController implements Controller {
     }
 
     private devhelp(){
-        const all = this.app.listaTudo()
-        all['now']=Date.now()
-        all['is']=is.json(all)
+        const all = this.app.listaTudo()       
         this.app.res.json(all)
     }
     private lista(action: string){

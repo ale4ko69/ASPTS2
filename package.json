@@ -10,7 +10,7 @@
         "build": "npm run compilats ",
         "compilats": "tsc",
         "postcompilats": "npm run copiarArquivos",
-        "copiarArquivos": "copyfiles -u 1 src/aspts/lib/*.* dist && copyfiles -u 1 src/*.as* dist/",
+        "copiarArquivos": "copyfiles -u 1 src/aspts/lib/*.* dist && copyfiles -u 1 src/*.as* dist/ && copyfiles -u 1 src/web.config dist/",
         "test": " "
     },
     "repository": {
