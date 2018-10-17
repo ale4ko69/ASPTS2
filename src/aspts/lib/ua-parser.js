@@ -1,14 +1,6 @@
-/*!
- * UAParser.js v0.7.18
- * Lightweight JavaScript-based User-Agent string parser
- * https://github.com/faisalman/ua-parser-js
- *
- * Copyright © 2012-2016 Faisal Salman <fyzlman@gmail.com>
- * Dual licensed under GPLv2 or MIT
- */
 
-// declarada variável para exportar UAParser.
-var UAParser=(function (window, undefined) {
+var UAParser;
+(function (window, undefined) {
 
     'use strict';
 
@@ -1068,8 +1060,30 @@ var UAParser=(function (window, undefined) {
             });
         } else if (window) {
             // browser env
-            return UAParser;
+            window.UAParser = UAParser;
         }
     }
 
-})(typeof window === 'object' ? window : this);
+    // jQuery/Zepto specific (optional)
+    // Note:
+    //   In AMD env the global scope should be kept clean, but jQuery is an exception.
+    //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
+    //   and we should catch that.
+    var $ = window && (window.jQuery || window.Zepto);
+    if (typeof $ !== UNDEF_TYPE && !$.ua) {
+        var parser = new UAParser();
+        $.ua = parser.getResult();
+        $.ua.get = function () {
+            return parser.getUA();
+        };
+        $.ua.set = function (uastring) {
+            parser.setUA(uastring);
+            var result = parser.getResult();
+            for (var prop in result) {
+                $.ua[prop] = result[prop];
+            }
+        };
+    }
+
+})(UAParser || (UAParser = {}));
+UAParser=UAParser.UAParser;

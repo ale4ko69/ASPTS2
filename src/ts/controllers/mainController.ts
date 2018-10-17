@@ -1,11 +1,13 @@
 /// <reference path="controllerInterface.d.ts" />
 /// <reference path="../routes/Router.ts" />
+
 enum MainActions {}
 class MainController implements Controller {
   private app: ASPTS.ASPAdapter;
   private router: Router;
   constructor(app: ASPTS.ASPAdapter) {
     this.app = app;
+   
     this.router = new Router(app);
   }
 
@@ -37,7 +39,7 @@ class MainController implements Controller {
 
   run() {
     this.PostOnly() 
-    this. verificaManutencao();  
+    this.verificaManutencao();  
     this.autenticaUsuario();
     this.router.Route();
   }

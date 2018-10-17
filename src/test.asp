@@ -9,6 +9,8 @@
     
 </head>
 <body>
+<hr>
+<h2>default.asp?c=testsql&a=devhelp</h2>
     <FORM id="FORMDATA" action="default.asp?c=testsql&a=devhelp" METHOD="POST">
         <P>
             Type something:
@@ -24,6 +26,15 @@
                     <INPUT TYPE="HIDDEN" NAME="hidden field" VALUE="something">
                     <INPUT TYPE="SUBMIT" VALUE="Send">
     </FORM>    
+
+
+<hr>
+<h2>default.asp?c=testsql&a=lista</h2>
+        <FORM id="FORMLISTA" action="default.asp?c=testsql&a=lista" METHOD="POST">
+                    <INPUT TYPE="SUBMIT" VALUE="Send">
+    </FORM>  
+
+
     <script>
         document.cookie = "screen_w=" + screen.availWidth ;
         document.cookie = "screen_h=" + screen.availHeight; 

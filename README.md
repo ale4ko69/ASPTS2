@@ -34,3 +34,5 @@ exemplo: http://localhost:11117/default.asp?c=testsql&a=devhelp
 * http://gago.io/blog/typescript-classicasp-why-not/
 * https://github.com/bysanches/ASPTypeScriptSample
 * http://legacytotheedge.blogspot.com/2014/05/guide-to-javascript-on-classic-asp.html
+* https://github.com/honey6611/react-asp-jscript
+* https://ns7.webmasters.com/caspdoc/html/jscript_objects.htm
